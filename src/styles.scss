@@ -1,0 +1,100 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+// IDs of the svg groups
+
+#notes {
+  animation: notes 5s linear infinite forwards;
+}
+
+#sound-lines {
+  animation: lines 5s linear infinite forwards;
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  }
+
+#plant {
+  animation: plant 10s linear infinite forwards;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+#head {
+  animation: head 3s linear infinite forwards;
+  transform-origin: bottom;
+  transform-box: fill-box;
+  }
+
+
+
+// Animation frames
+
+@keyframes notes {
+  0% {
+    opacity: 0;
+    transform: translateY(0%)
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(-20%)
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0%)
+  }
+}
+
+
+@keyframes lines {
+  0% {
+    transform: scaleY(1.1);
+
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+  100% {
+    transform: scaleY(1.1);
+
+  }
+}
+
+
+
+@keyframes plant {
+0% {
+  transform: rotatez(0deg)
+}
+25% {
+  transform: rotatez(10deg)
+
+}
+75% {
+  transform: rotatez(-10deg)
+}
+100% {
+  transform: rotatez(0deg)
+}
+}
+
+@keyframes head {
+  0% {
+    transform: rotatez(0deg)
+  }
+  25% {
+    transform: rotatez(-10deg)
+  
+  }
+  75% {
+    transform: rotatez(10deg)
+  }
+  100% {
+    transform: rotatez(0deg)
+  }
+}
